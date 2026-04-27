@@ -6,6 +6,7 @@ function clockUpdater() {
     writeCurrentTimeTo(currentTimeElement);
     // 1秒おきに時計を更新
     setInterval(() => {writeCurrentTimeTo(currentTimeElement)}, 1000);
+    setInterval(() => {checkDateEvent()},1000);
 }
 
 // 時刻書き込み関数
