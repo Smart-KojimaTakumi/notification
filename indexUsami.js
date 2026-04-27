@@ -1,61 +1,215 @@
 const date_event = [
-  { time: "09:00", event: "学習開始フォーム記入" },
+  {
+    time: "09:00",
+    event: "学習開始フォーム記入",
+    voice: "おはようございます。学習開始フォームを記入してください"
+  },
 
-  { time: "09:10", event: "集中学習開始（45分）" },
-  { time: "09:55", event: "アウトプットフォーム記入" },
-  { time: "10:00", event: "ペアになってアウトプット開始" },
-  { time: "11:00", event: "休憩（5分）" },
+  {
+    time: "09:10",
+    event: "集中学習開始（45分）",
+    voice: "集中学習を開始してください。"
+  },
+  {
+    time: "09:55",
+    event: "アウトプットフォーム記入",
+    voice: "集中学習を終了してアウトプットフォームを記入してください。"
+  },
+  {
+    time: "10:00",
+    event: "ペアになってアウトプット開始",
+    voice: "ペアを組んでアウトプットをしてください。"
+  },
+  {
+    time: "11:00",
+    event: "休憩（5分）",
+    voice: "５分間の休憩をとってください。"
+  },
 
-  { time: "11:05", event: "集中学習開始（45分）" },
-  { time: "11:50", event: "アウトプットフォーム記入" },
-  { time: "11:55", event: "ペアになってアウトプット開始" },
+  {
+    time: "11:05",
+    event: "集中学習開始（45分）",
+    voice: "集中学習を開始してください。"
+  },
+  {
+    time: "11:50",
+    event: "アウトプットフォーム記入",
+    voice: "集中学習を終了してアウトプットフォームを記入してください。"
+  },
+  {
+    time: "11:55",
+    event: "ペアになってアウトプット開始",
+    voice: "ペアを組んでアウトプットをしてください。"
+  },
 
-  { time: "12:00", event: "昼休憩（1時間）" },
+  {
+    time: "12:00",
+    event: "昼休憩（1時間）",
+    voice: "１時間のお昼休憩をとってください。"
+  },
 
-  { time: "13:00", event: "集中学習開始（45分）" },
-  { time: "13:45", event: "アウトプットフォーム記入" },
-  { time: "13:50", event: "ペアになってアウトプット開始" },
-  { time: "13:55", event: "休憩（5分）" },
+  {
+    time: "13:00",
+    event: "集中学習開始（45分）",
+    voice: "集中学習を開始してください。"
+  },
+  {
+    time: "13:45",
+    event: "アウトプットフォーム記入",
+    voice: "集中学習を終了してアウトプットフォームを記入してください。"
+  },
+  {
+    time: "13:50",
+    event: "ペアになってアウトプット開始",
+    voice: "ペアを組んでアウトプットをしてください。"
+  },
+  {
+    time: "13:55",
+    event: "休憩（5分）",
+    voice: "５分間の休憩をとってください。"
+  },
 
-  { time: "14:00", event: "集中学習開始（45分）" },
-  { time: "14:45", event: "アウトプットフォーム記入" },
-  { time: "14:50", event: "ペアになってアウトプット開始" },
-  { time: "14:55", event: "休憩（5分）" },
+  {
+    time: "14:00",
+    event: "集中学習開始（45分）",
+    voice: "集中学習を開始してください。"
+  },
+  {
+    time: "14:45",
+    event: "アウトプットフォーム記入",
+    voice: "集中学習を終了してアウトプットフォームを記入してください。"
+  },
+  {
+    time: "14:50",
+    event: "ペアになってアウトプット開始",
+    voice: "ペアを組んでアウトプットをしてください。"
+  },
+  {
+    time: "14:55",
+    event: "休憩（5分）",
+    voice: "５分間の休憩をとってください。"
+  },
 
-  { time: "15:00", event: "集中学習開始（45分）" },
-  { time: "15:45", event: "アウトプットフォーム記入" },
-  { time: "15:50", event: "ペアになってアウトプット開始" },
-  { time: "15:55", event: "休憩（5分）" },
+  {
+    time: "15:00",
+    event: "集中学習開始（45分）",
+    voice: "集中学習を開始してください。"
+  },
+  {
+    time: "15:45",
+    event: "アウトプットフォーム記入",
+    voice: "集中学習を終了してアウトプットフォームを記入してください。"
+  },
+  {
+    time: "15:50",
+    event: "ペアになってアウトプット開始",
+    voice: "ペアを組んでアウトプットをしてください。"
+  },
+  {
+    time: "15:55",
+    event: "休憩（5分）",
+    voice: "５分間の休憩をとってください。"
+  },
 
-  { time: "16:00", event: "集中学習開始（45分）" },
-  { time: "16:45", event: "アウトプットフォーム記入" },
-  { time: "16:50", event: "ペアになってアウトプット開始" },
-  { time: "16:55", event: "休憩（5分）" },
+  {
+    time: "16:00",
+    event: "集中学習開始（45分）",
+    voice: "集中学習を開始してください。"
+  },
+  {
+    time: "16:45",
+    event: "アウトプットフォーム記入",
+    voice: "集中学習を終了してアウトプットフォームを記入してください。"
+  },
+  {
+    time: "16:50",
+    event: "ペアになってアウトプット開始",
+    voice: "ペアを組んでアウトプットをしてください。"
+  },
+  {
+    time: "16:55",
+    event: "休憩（5分）",
+    voice: "５分間の休憩をとってください。"
+  },
 
-  { time: "17:00", event: "集中学習開始（45分）" },
-  { time: "17:45", event: "学習振り返りフォーム記入" },
-  { time: "17:55", event: "ペアになってアウトプット開始" },
+  {
+    time: "17:00",
+    event: "集中学習開始（45分）",
+    voice: "集中学習を開始してください。"
+  },
+  {
+    time: "17:45",
+    event: "学習振り返りフォーム記入",
+    voice: "集中学習を終了して学習振り返りフォームを記入してください。"
+  },
+  {
+    time: "17:55",
+    event: "ペアになってアウトプット開始",
+    voice: "ペアを組んでアウトプットをしてください。"
+  },
 
-  { time: "18:00", event: "業務終了" }
+  {
+    time: "18:00",
+    event: "業務終了",
+    voice: ""
+  }
 ];
 
-// index.js メイン関数
-function notificationLoop() {
-  const currentStatusElement = document.getElementById("current-status");
+// 時刻更新処理 メイン関数
+function clockUpdater() {
+    // 時計の要素を取得
+    const currentTimeElement = document.getElementById("current-time");
+    let dateList = getDate();
+    const eventIndex = getCurrentEventIndex(dateList);
+    // 初回更新
+    writeCurrentTimeTo(currentTimeElement); // 時刻表示
+    addLogsBefore(eventIndex); // 過去ログ
+    // 1秒おきに時計を更新
+    setInterval(() => {writeCurrentTimeTo(currentTimeElement)}, 1000)
+}
 
-  let lastEventIndex = 0;
-  setInterval(() => {
-    // 現在のイベントを取得
-    const eventIndex = getCurrentEventIndex();
-    console.log(`イベントID: ${eventIndex} 「${date_event[eventIndex].event}」`);
-
-    // イベントに変化があるなら通知する
-    if (lastEventIndex !== eventIndex) {
-      sound();
-      currentStatusElement.textContent = date_event[eventIndex].event;
-      lastEventIndex = eventIndex;
+// イベント確認関数
+function checkDateEvent(dateList){
+  const status = document.getElementById("current-status");
+  // date_eventリストの回数分ループ
+  date_event.forEach(items => {
+    if(items.time == toTwoDigits(dateList[0]) + ":" + toTwoDigits(dateList[1])){
+      console.log("時間を見つけました。");
+      console.log("ここでしゃべります");
+      status.textContent = items.event;
+      sound(items.voice);
+      addLogToList(items.time, items.event);
+    }else{
+      console.log("時間を見つけられませんでした。");
     }
-  }, 10000);
+  });
+}
+
+// 時刻書き込み関数
+function writeCurrentTimeTo(element) {
+    // 現在時刻取得関数
+    let dateList = getDate();
+    // 表示を更新する
+    // dateListは0:時、1:分、2:秒
+    element.textContent =
+        `${toTwoDigits(dateList[0])}:${toTwoDigits(dateList[1])}:${toTwoDigits(dateList[2])}`;
+    // 秒数が00、かつ、分数が5で割り切れるとき
+    if(toTwoDigits(dateList[2]) == "00" && dateList[1] % 5 == 0){
+      // 現在時刻を引数にしてイベント確認関数へ
+      checkDateEvent(dateList);
+      console.log(getCurrentEventIndex(dateList));
+    }
+}
+
+// 現在時刻取得関数
+function getDate(){
+    // 現在時刻を取得
+    const currentDate = new Date();
+    // 時間・分・秒を取得
+    const hours = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+    const seconds = currentDate.getSeconds();
+    return [hours,minutes,seconds];
 }
 
 // 文字列を数値変換
@@ -73,14 +227,9 @@ function parseTimeStr(time) {
   return timenumber;
 }
 
-function getCurrentEventIndex() {
-  // 現在時刻を取得
-  const currentDate = new Date();
-  // 時間・分を取得
-  const hours = currentDate.getHours();
-  const minutes = currentDate.getMinutes();
+function getCurrentEventIndex(dateList) {
   // 現在時刻をひとまとめにする
-  const checkTimeNum = hours * 100 + minutes;
+  const checkTimeNum = dateList[0] * 100 + dateList[1];
 
   // 現在のイベントインデックス
   let eventIndex = 0;
@@ -93,10 +242,50 @@ function getCurrentEventIndex() {
     // イベントの時間を過ぎているなら最後のイベントを更新
     if (checkTimeNum >= eventTimeNum) {
       eventIndex = i;
+    }else{
+      break;
     }
   }
 
   return eventIndex;
 }
 
-window.addEventListener("load", notificationLoop);
+function sound(text){
+  // 音声出力したい内容をuttrに代入
+  const uttr = new SpeechSynthesisUtterance(text);
+  // uttrをWebSpeachAPIを用いて発声させる。
+  speechSynthesis.speak(uttr);
+}
+
+// 2桁フォーマット関数
+function toTwoDigits(value) {
+    return String(value).padStart(2, "0");
+}
+
+// ログをリストに追加する関数
+function addLogToList(time, log) {
+  const html = `
+    <li class="log-list-element">
+      <p class="time">${time}</p>
+      <p class="event">${log}</p>
+    </li>
+  `;
+
+  const logList = document.getElementById("log-list");
+  logList.insertAdjacentHTML("afterbegin", html);
+}
+
+// 過去ログをすべて追加する関数
+function addLogsBefore(index) {
+  // イベントをindexまでループ
+  for (let i = 0; i < index + 1; i++) {
+    const event = date_event[i];
+    // 過去ログを追加
+    addLogToList(event.time, event.event);
+  }
+}
+
+window.addEventListener("load", clockUpdater);
+
+
+
