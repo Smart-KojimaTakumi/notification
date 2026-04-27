@@ -266,12 +266,7 @@ function toTwoDigits(value) {
 
 // ログをリストに追加する関数
 function addLogToList(time, log) {
-  const html = `
-    <li class="log-list-element">
-      <p class="time">${time}</p>
-      <p class="event">${log}</p>
-    </li>
-  `;
+  const html = buildLogHtml(time,log);
 
   const logList = document.getElementById("log-list");
   logList.insertAdjacentHTML("afterbegin", html);
@@ -285,6 +280,15 @@ function addLogsBefore(index) {
     // 過去ログを追加
     addLogToList(event.time, event.event);
   }
+}
+
+function buildLogHtml(time,log){
+  return html = `
+    <li class="log-list-element">
+      <p class="time">${time}</p>
+      <p class="event">${log}</p>
+    </li>
+  `
 }
 
 window.addEventListener("load", clockUpdater);

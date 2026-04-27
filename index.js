@@ -160,9 +160,12 @@ function clockUpdater() {
     // 時計の要素を取得
     const currentTimeElement = document.getElementById("current-time");
     let dateList = getDate();
-    getCurrentEventIndex(dateList);
+    const eventIndex = getCurrentEventIndex(dateList);
     // 初回更新
-    writeCurrentTimeTo(currentTimeElement);
+    writeCurrentTimeTo(currentTimeElement); // 時刻表示
+    addLogsBefore(eventIndex); // 過去ログ
+    const status = document.getElementById("current-status" );
+    status.textContent = date_event[eventIndex].event; // 現在のステータス
     // 1秒おきに時計を更新
     setInterval(() => {writeCurrentTimeTo(currentTimeElement)}, 1000)
 }
@@ -177,6 +180,7 @@ function checkDateEvent(dateList){
       console.log("ここでしゃべります");
       status.textContent = items.event;
       sound(items.voice);
+      addLogToList(items.time, items.event);
     }else{
       console.log("時間を見つけられませんでした。");
     }
@@ -259,6 +263,35 @@ function sound(text){
 function toTwoDigits(value) {
     return String(value).padStart(2, "0");
 }
+
+// ログをリストに追加する関数
+function addLogToList(time, log) {
+  const html = buildLogHtml(time,log);
+
+  const logList = document.getElementById("log-list");
+  logList.insertAdjacentHTML("afterbegin", html);
+}
+
+// 過去ログをすべて追加する関数
+function addLogsBefore(index) {
+  // イベントをindexまでループ
+  for (let i = 0; i < index + 1; i++) {
+    const event = date_event[i];
+    // 過去ログを追加
+    addLogToList(event.time, event.event);
+  }
+}
+
+function buildLogHtml(time,log){
+  return html = `
+    <li class="log-list-element">
+      <p class="time">${time}</p>
+      <p class="event">${log}</p>
+    </li>
+  `
+}
+
+
 
 window.addEventListener("load", clockUpdater);
 
