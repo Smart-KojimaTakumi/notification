@@ -164,6 +164,8 @@ function clockUpdater() {
     // 初回更新
     writeCurrentTimeTo(currentTimeElement); // 時刻表示
     addLogsBefore(eventIndex); // 過去ログ
+    const status = document.getElementById("current-status" );
+    status.textContent = date_event[eventIndex].event; // 現在のステータス
     // 1秒おきに時計を更新
     setInterval(() => {writeCurrentTimeTo(currentTimeElement)}, 1000)
 }
