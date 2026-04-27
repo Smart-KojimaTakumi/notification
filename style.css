@@ -1,0 +1,42 @@
+header{
+  height: 100px;
+  width: 100vw;
+  background-color: #001E68;
+  padding-left: 50px;
+  margin-bottom: 50px;
+}
+
+.logo{
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.main-wrapper{
+  text-align: center;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.current-time{
+  margin-top: 30px;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.current-status{
+  font-size: 20px;
+  font-weight: 300;
+  width: 60vw;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #001E68;
+}
