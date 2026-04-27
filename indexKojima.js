@@ -96,7 +96,7 @@ const date_event = [
     voice: "集中学習を開始してください。"
   },
   {
-    time: "15:30",
+    time: "15:45",
     event: "アウトプットフォーム記入",
     voice: "集中学習を終了してアウトプットフォームを記入してください。"
   },
@@ -160,7 +160,8 @@ function clockUpdater() {
     // 時計の要素を取得
     const currentTimeElement = document.getElementById("current-time");
     let dateList = getDate();
-    getCurrentEventIndex(dateList);
+    const logIndex = getCurrentEventIndex(dateList);
+    logSet(logIndex);
     // 初回更新
     writeCurrentTimeTo(currentTimeElement);
     // 1秒おきに時計を更新
@@ -177,6 +178,8 @@ function checkDateEvent(dateList){
       console.log("ここでしゃべります");
       status.textContent = items.event;
       sound(items.voice);
+      let logIndex = getCurrentEventIndex(dateList);
+      logUpdate(logIndex);
     }else{
       console.log("時間を見つけられませんでした。");
     }
@@ -196,7 +199,7 @@ function writeCurrentTimeTo(element) {
       // 現在時刻を引数にしてイベント確認関数へ
       checkDateEvent(dateList);
       console.log(getCurrentEventIndex(dateList));
-    }
+    } 
 }
 
 // 現在時刻取得関数
@@ -253,6 +256,27 @@ function sound(text){
   const uttr = new SpeechSynthesisUtterance(text);
   // uttrをWebSpeachAPIを用いて発声させる。
   speechSynthesis.speak(uttr);
+}
+
+function logTextMake(IndexNow){
+  return html = `
+    <li class="log-list-element">
+      <p class="time">${date_event[IndexNow].time}</p>
+      <p class="event">${date_event[IndexNow].event}</p>
+    </li>
+  `
+}
+
+function logSet(logIndex){
+  for(i = 0; i <= logIndex ; i++){
+    const logList = document.getElementById("log-list");
+    logList.insertAdjacentHTML("afterbegin",logTextMake(i));
+  }
+}
+
+function logUpdate(logIndex){
+  const logList = document.getElementById("log-list");
+  logList.insertAdjacentHTML("afterbegin",logTextMake(logIndex));
 }
 
 // 2桁フォーマット関数
