@@ -18,7 +18,7 @@ function clockUpdater() {
 // イベント確認関数
 function checkDateEvent(dateList){
   const status = document.getElementById("current-status");
-  // date_eventリストの回数分ループ
+  // date_eventリストの回数分ループa
   date_event.forEach(items => {
     if(items.time == toTwoDigits(dateList[0]) + ":" + toTwoDigits(dateList[1])){
       console.log("時間を見つけました。");
@@ -128,7 +128,7 @@ function addLogsBefore(index) {
 }
 
 function buildLogHtml(time,log){
-  return html = `
+  return  `
     <li class="log-list-element">
       <p class="time">${time}</p>
       <p class="event">${log}</p>
