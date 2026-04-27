@@ -128,12 +128,12 @@ function addLogsBefore(index) {
 }
 
 function buildLogHtml(time,log){
-  return  `
+  return `
     <li class="log-list-element">
       <p class="time">${time}</p>
       <p class="event">${log}</p>
     </li>
-  `
+  `;
 }
 
 
