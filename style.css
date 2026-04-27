@@ -40,3 +40,39 @@ h1{
   padding-bottom: 30px;
   border-bottom: 3px solid #001E68;
 }
+
+.log-contents{
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.log-contents h2{
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.log-list{
+  width: 50vw;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.log-list-element{
+  width: 100%;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+.time{
+  width: 20%;
+  margin-left: 5%;
+}
+
+.event{
+  width: 75%;
+}
