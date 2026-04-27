@@ -1,4 +1,4 @@
-export const date_event = [
+const date_event = [
   { time: "09:00", event: "学習開始フォーム記入" },
 
   { time: "09:10", event: "集中学習開始（45分）" },
