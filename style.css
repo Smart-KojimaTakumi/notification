@@ -1,3 +1,7 @@
+body{
+  background-color: #FAFAFA;
+}
+
 header{
   height: 100px;
   background-color: #001E68;
@@ -21,7 +25,7 @@ header{
 }
 
 .date-contents{
-  height: 50%;
+  height: 250px;
 }
 
 .log-contents{
@@ -51,7 +55,8 @@ h1{
 
 .log-contents{
   width: 60vw;
-  margin: 0 auto;
+  height: calc(100vh - 150px - 120px -270px);
+  margin: 20px auto 0;
 }
 
 .log-contents h2{
