@@ -55,8 +55,8 @@ h1{
 
 .log-contents{
   width: 60vw;
-  height: calc(100vh - 150px - 120px -270px);
-  margin: 20px auto 0;
+  height: calc(100vh - 150px - 120px - 290px);
+  margin: 20px auto 20px;
 }
 
 .log-contents h2{
